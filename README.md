@@ -1,90 +1,68 @@
-# 🚗 Crash Rate Prediction from Traffic Volume Data using AI
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-An interactive web application built to help transportation researchers and agencies forecast crash rates based on historical traffic volume data using machine learning.
+## Getting Started
 
----
+First, run the development server:
 
-## 🔍 Overview
-
-This project was developed in collaboration with the Center for Sustainable Mobility (CSM) at the Virginia Tech Transportation Institute under the guidance of Dr. Mohamed Farag. The tool enables users to upload traffic data, view past crash predictions, and manage machine learning models—all within a secure web interface.
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React, Next.js, Material-UI  
-- **Backend**: FastAPI (ML), Next.js API routes (web backend)  
-- **ML Development**: Google Colab, TensorFlow  
-- **Authentication**: JWT-based login/signup  
-- **Deployment**: Docker (for local dev)  
-
----
-
-## ✨ Key Features
-
-- 🔐 Secure login/signup with JWT token authentication  
-- 📁 Upload traffic volume datasets (CSV)  
-- 🤖 Run crash prediction models trained offline via Google Colab  
-- 📊 View historical predictions with model metadata  
-- 🧑‍💼 Admin tools for uploading and managing models  
-
----
-
-## 📊 Evaluation & Testing
-
-- Machine learning models were trained and evaluated offline in Google Colab  
-- Frontend and backend modules were tested with real-world traffic datasets  
-- Client feedback was gathered from Dr. Farag and incorporated into the final product  
-
----
-
-## 🧪 How to Run Locally
-
-### Backend (FastAPI ML server)
 ```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-### Frontend (Next.js web server)
-```bash
-cd frontend
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+### Setup Python Environment (1st time setup only)
 
-## 📁 Folder Structure
+1. Create a virtual environment (make sure you are in the FastAPI folder in terminal):
 
-```
-traffic-crash-predictor/
-│
-├── backend/           # ML backend (FastAPI)
-├── frontend/          # Web interface (React + Next.js)
-├── colab_models/      # Offline Colab notebooks for model training
-├── utils/             # Data processing scripts
-└── docker-compose.yml
-```
+    - On Windows:
+        ```windows powershell
+        python -m venv venv
+        ```
+    - On macOS/Linux:
+        ```bash
+        python3.11 -m venv venv
+        ```
 
----
+2. Activate the virtual environment:
 
-## 📎 Project Report
+    - On Windows:
+        ```bash
+        ./venv/Scripts/activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source venv/bin/activate
+        ```
 
-- 📄 [Project page ](https://vtechworks.lib.vt.edu/items/bd9772e1-81d0-48af-89fe-31c788c01ec5)
-- 🖥️ Developed as part of Virginia Tech CS4624 (Fall 2024)
+3. Install the required Python dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Now run the FastAPI server:
+    - uvicorn app:app --reload (It will be running on http://127.0.0.1:8000)
 
----
+Note that if you have already completed these steps for initial setup, proceed every time with step 2-4,
+activating venv, checking that dependencies are up to date, and proceed with starting FastAPI server.
 
-## 📫 Contact
+### Dependencies
 
-Devanshu Khadka  
-[LinkedIn](https://linkedin.com/in/devanshukhadka)  
-📧 khadkadevanshu@gmail.com
+1. Ensure you install all dependencies with npm install
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📜 License
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-For academic and research use only. Contact authors for reuse or extension rights.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
